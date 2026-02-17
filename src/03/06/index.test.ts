@@ -1,9 +1,9 @@
 describe("真偽値の検証", () => {
   test("「真の値」の検証", () => {
-    expect(1).toBeTruthy();
+    expect(1).toBeTruthy(); // 真偽値の判定
     expect("1").toBeTruthy();
     expect(true).toBeTruthy();
-    expect(0).not.toBeTruthy();
+    expect(0).not.toBeTruthy(); // マッチャーの前にnotをつけると判定を反転できる
     expect("").not.toBeTruthy();
     expect(false).not.toBeTruthy();
   });
@@ -18,8 +18,8 @@ describe("真偽値の検証", () => {
   test("「null, undefined」の検証", () => {
     expect(null).toBeFalsy();
     expect(undefined).toBeFalsy();
-    expect(null).toBeNull();
-    expect(undefined).toBeUndefined();
+    expect(null).toBeNull(); // nullか判定
+    expect(undefined).toBeUndefined(); //undefinedか判定
     expect(undefined).not.toBeDefined();
   });
 });
